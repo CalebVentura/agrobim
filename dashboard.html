@@ -4,8 +4,8 @@
 
     <meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Agro</title>
-    <link rel="icon" href="agrobime.ico" />
+    <title>Agro-analisis</title>
+    <link rel="icon" href="leaves.png" />
     <link rel="apple-touch-icon" href="agrobime.png" />
     <link rel="manifest" href="manifest.json" />
     
@@ -23,6 +23,7 @@
   </head>
   <body class="bg-dark">
 
+    <!-- navegación principal -->
     <div class="cover-container d-flex w-100 h-100 text-center p-3 mx-auto flex-column  text-white mx-auto">
         <header class="mb-auto">
             <div>
@@ -34,10 +35,11 @@
             </nav>
             </div>
         </header>
-    </div><!-- ./navbar -->
+    </div>
 
+    <!-- Dashboard -->
     <div class="wrapper">
-        <!-- Navbar -->
+        <!-- navegación del dashboard -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light">
           <!-- Left navbar links -->
           <ul class="navbar-nav">
@@ -165,9 +167,8 @@
             
           </ul>
         </nav>
-        <!-- /.navbar -->
-    
-        <!-- Main Sidebar Container -->
+        
+        <!-- Menu vertical del lado izquierdo -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
           <!-- Brand Logo -->
           <a href="../../index3.html" class="brand-link">
@@ -697,34 +698,27 @@
           <!-- /.sidebar -->
         </aside>
     
-        <!-- Content Wrapper. Contains page content -->
+        <!-- Contenido principal del dashboard - gráficos -->
         <div class="content-wrapper bg-dark">
-          <!-- Content Header (Page header) -->
+          <!-- Content Header (Título del DASHBOARD) -->
           <section class="content-header">
-            <div class="container-fluid">
-              <div class="row mb-2">
-                <div class="col-sm-6">
-                  <h1>Análisis gráfico</h1>
-                </div>
-                <div class="col-sm-6">
-                  <ol class="breadcrumb float-sm-right">
-                    <li class="breadcrumb-item"><a href="#">Inicio</a></li>
-                  </ol>
-                </div>
-              </div>
-            </div><!-- /.container-fluid -->
+            <div class="container-fluid" >
+              <h1 class="text-center">Análisis estadístico de nuestros productos</h1>
+            </div>
           </section>
     
-          <!-- Main content -->
+          <!-- Contenido principal - Gráficos-->
           <section class="content">
             <div class="container-fluid">
               <div class="row">
+
+                <!-- columnda (IZQUIERDA) -->
                 <div class="col-md-6">
                   
                   <!-- AREA CHART -->
                   <div class="card card-primary">
                     <div class="card-header">
-                      <h3 class="card-title">Control de temperaturas</h3>
+                      <h3 class="card-title">Nivel de ventas mensuales en Quintales</h3>
     
                       <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -742,12 +736,11 @@
                     </div>
                     <!-- /.card-body -->
                   </div>
-                  <!-- /.card -->
     
                   <!-- DONUT CHART -->
                   <div class="card card-danger">
                     <div class="card-header">
-                      <h3 class="card-title">Nivel de producción</h3>
+                      <h3 class="card-title">Porcentaje de producción de cada cultivo</h3>
     
                       <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -763,12 +756,11 @@
                     </div>
                     <!-- /.card-body -->
                   </div>
-                  <!-- /.card -->
     
                   <!-- PIE CHART -->
                   <div class="card card-danger">
                     <div class="card-header">
-                      <h3 class="card-title">Resumen mensual</h3>
+                      <h3 class="card-title">Área de sembrado destinado a cada cultivo (milh)</h3>
     
                       <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
@@ -784,18 +776,16 @@
                     </div>
                     <!-- /.card-body -->
                   </div>
-                  <!-- /.card -->
     
                 </div>
 
-                <!-- /.col (LEFT) -->
+                <!-- columna (DERECHA) -->
                 <div class="col-md-6">
                   
                   <!-- LINE CHART -->
                   <div class="card card-info">
                     <div class="card-header">
-                      <h3 class="card-title">Lluvias al mes</h3>
-    
+                      <h3 class="card-title">Días de lluvias al mes</h3>
                       <div class="card-tools">
                         <button type="button" class="btn btn-tool" data-card-widget="collapse">
                           <i class="fas fa-minus"></i>
@@ -812,7 +802,6 @@
                     </div>
                     <!-- /.card-body -->
                   </div>
-                  <!-- /.card -->
     
                   <!-- BAR CHART -->
                   <div class="card card-success">
@@ -835,9 +824,8 @@
                     </div>
                     <!-- /.card-body -->
                   </div>
-                  <!-- /.card -->
     
-                  <!-- STACKED BAR CHART -->
+                  <!-- SCATTER CHART -->
                   <div class="card card-success">
                     <div class="card-header">
                       <h3 class="card-title">Arándanos y Espárragos</h3>
@@ -853,30 +841,26 @@
                     </div>
                     <div class="card-body">
                       <div class="chart">
-                        <canvas id="stackedBarChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
+                        <canvas id="scatterChart" style="min-height: 250px; height: 250px; max-height: 250px; max-width: 100%;"></canvas>
                       </div>
                     </div>
                     <!-- /.card-body -->
                   </div>
-                  <!-- /.card -->
     
                 </div>
-                <!-- /.col (RIGHT) -->
-
+              
               </div>
-              <!-- /.row -->
-            </div><!-- /.container-fluid -->
+            </div>
           </section>
-          <!-- /.content -->
         </div>
-        <!-- /.content-wrapper -->
 
+        <!-- pie de página -->
         <footer class="main-footer text-center bg-dark text-white">
-          <b>Version 0.1.0 | </b> 
-          <strong>Copyright <a href="https://github.com/CalebVentura"> @iot_dev</a></strong>
+          <b>Version 0.5 | developed by</b> 
+          <strong><a href="https://github.com/CalebVentura"> @kali</a></strong>
         </footer> 
 
-    </div><!-- ./wrapper -->
+    </div>
 
     <!-- jQuery -->
     <script src="plugins/jquery/jquery.min.js"></script>
@@ -887,8 +871,7 @@
     <!-- AdminLTE App -->
     <script src="dist/js/adminlte.min.js"></script>
     <!-- AdminLTE for demo purposes -->
-    <script src="dist/js/demo.js"></script>
-    <!-- Page specific script -->
+    
     <script>
     $(function () {
         /* ChartJS
@@ -904,10 +887,10 @@
         var areaChartCanvas = $('#areaChart').get(0).getContext('2d')
 
         var areaChartData = {
-        labels  : ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+        labels  : ['Enero', 'Febrero', 'Marzo', 'Abril', 'Mayo', 'Junio', 'Julio'],
         datasets: [
             {
-            label               : 'Digital Goods',
+            label               : 'Papas',
             backgroundColor     : 'rgba(60,141,188,0.9)',
             borderColor         : 'rgba(60,141,188,0.8)',
             pointRadius          : false,
@@ -915,10 +898,10 @@
             pointStrokeColor    : 'rgba(60,141,188,1)',
             pointHighlightFill  : '#fff',
             pointHighlightStroke: 'rgba(60,141,188,1)',
-            data                : [28, 48, 40, 19, 86, 27, 90]
-            },
+            data                : [28, 42, 30, 55, 95, 87, 40]
+            }, // Aquí se deben extraer los datos desde la base de datos en Firebase
             {
-            label               : 'Electronics',
+            label               : 'Habas',
             backgroundColor     : 'rgba(210, 214, 222, 1)',
             borderColor         : 'rgba(210, 214, 222, 1)',
             pointRadius         : false,
@@ -926,7 +909,7 @@
             pointStrokeColor    : '#c1c7d1',
             pointHighlightFill  : '#fff',
             pointHighlightStroke: 'rgba(220,220,220,1)',
-            data                : [65, 59, 80, 81, 56, 55, 40]
+            data                : [42, 59, 50, 25, 10, 2, 2]
             },
         ]
         }
@@ -935,17 +918,17 @@
         maintainAspectRatio : false,
         responsive : true,
         legend: {
-            display: false
+            display: true
         },
         scales: {
             xAxes: [{
             gridLines : {
-                display : false,
+                display : true,
             }
             }],
             yAxes: [{
             gridLines : {
-                display : false,
+                display : true,
             }
             }]
         }
@@ -962,10 +945,43 @@
         //- LINE CHART -
         //--------------
         var lineChartCanvas = $('#lineChart').get(0).getContext('2d')
-        var lineChartOptions = $.extend(true, {}, areaChartOptions)
-        var lineChartData = $.extend(true, {}, areaChartData)
+        var lineChartOptions = {
+        maintainAspectRatio : false,
+        responsive : true,
+        legend: {
+            display: false
+        },
+        scales: {
+            xAxes: [{
+            gridLines : {
+                display : true,
+            }
+            }],
+            yAxes: [{
+            gridLines : {
+                display : true,
+            }
+            }]
+        }
+        }
+        var lineChartData = {
+        labels: [
+            'Enero',
+            'Febrero',
+            'Marzo',
+            'Abril',
+            'Mayo',
+            'Junio',
+            'Julio'
+        ],
+        datasets: [ //Estos datos deben extraerse de firebase
+            {
+            data: [10,20,12,3,2,2,4],
+            backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de', '#00a65a'],
+            }
+        ]
+        }
         lineChartData.datasets[0].fill = false;
-        lineChartData.datasets[1].fill = false;
         lineChartOptions.datasetFill = false
 
         var lineChart = new Chart(lineChartCanvas, {
@@ -981,20 +997,21 @@
         var donutChartCanvas = $('#donutChart').get(0).getContext('2d')
         var donutData        = {
         labels: [
-            'Chrome',
-            'IE',
-            'FireFox',
-            'Safari',
-            'Opera',
-            'Navigator',
+            'Papas',
+            'Arberja',
+            'Habas',
+            'Oca',
+            'Avena',
+            'Tarwi',
         ],
-        datasets: [
+        datasets: [ //Estos datos deben extraerse de firebase
             {
-            data: [700,500,400,600,300,100],
+            data: [50,10,30,2,10,5],
             backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
             }
         ]
         }
+        // console.log(donutData)
         var donutOptions     = {
         maintainAspectRatio : false,
         responsive : true,
@@ -1012,7 +1029,22 @@
         //-------------
         // Get context with jQuery - using jQuery's .get() method.
         var pieChartCanvas = $('#pieChart').get(0).getContext('2d')
-        var pieData        = donutData;
+        var pieData        = {
+        labels: [
+            'Papas',
+            'Arberja',
+            'Habas',
+            'Oca',
+            'Avena',
+            'Tarwi',
+        ],
+        datasets: [ //Estos datos deben extraerse de firebase
+            {
+            data: [1000,150,200,50,200,400],
+            backgroundColor : ['#f56954', '#00a65a', '#f39c12', '#00c0ef', '#3c8dbc', '#d2d6de'],
+            }
+        ]
+        }
         var pieOptions     = {
         maintainAspectRatio : false,
         responsive : true,
@@ -1047,10 +1079,48 @@
         options: barChartOptions
         })
 
+
+        //---------------------
+        //- SCATTERING CHART -
+        //---------------------
+        var scatterChartCanvas = $('#scatterChart').get(0).getContext('2d')
+        var scatterChartData = {
+          labels: [10, 20, 30, 40, 50, 60, 70],
+          datasets: [
+            {
+              label: 'area cultivada - ha',
+              data: [28, 42, 30, 55, 65, 67, 40],
+              backgroundColor: 'rgba(60,141,188,0.9)',
+              borderColor: 'rgba(60,141,188,0.8)',
+            },
+            {
+              label: 'producción - milquintales',
+              data: [42, 59, 50, 25, 10, 2, 2],
+              backgroundColor: 'rgba(210, 214, 222, 1)',
+              borderColor: 'rgba(210, 214, 222, 1)',
+            }
+          ]
+        };
+        var scatterChartOptions = {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: 'bottom',
+          }
+        }
+        }
+
+        new Chart(scatterChartCanvas, {
+        type: 'scatter',
+        data: scatterChartData,
+        options: scatterChartOptions
+        })
+
         //---------------------
         //- STACKED BAR CHART -
         //---------------------
-        var stackedBarChartCanvas = $('#stackedBarChart').get(0).getContext('2d')
+        /*var stackedBarChartCanvas = $('#stackedBarChart').get(0).getContext('2d')
         var stackedBarChartData = $.extend(true, {}, barChartData)
 
         var stackedBarChartOptions = {
@@ -1070,7 +1140,7 @@
         type: 'bar',
         data: stackedBarChartData,
         options: stackedBarChartOptions
-        })
+        })*/
     })
     </script>
 
